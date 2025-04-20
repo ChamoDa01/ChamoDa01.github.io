@@ -438,6 +438,7 @@ img {
 /*==================== SKILLS ====================*/
 .skills__container{
   row-gap: 0;
+  padding: 1rem;
 }
 
 .skills__header{
@@ -450,6 +451,7 @@ img {
 .skills__icon, .skills__arrow{
   font-size: 2rem;
   color: var(--first-color);
+  flex-shrink: 0;
 }
 
 .skills__icon{
@@ -459,9 +461,10 @@ img {
 .skills__icons {
   display: flex;
   gap: 10px;
-  font-size: 40px;
+  font-size: 2rem;
   justify-content: center;
   align-items: center;
+  flex-wrap: wrap;
 }
 
 .skills__icons i {
@@ -791,7 +794,7 @@ img {
   display: grid;
   grid-template-columns: repeat(3, 1fr); /* Exactly 3 cards per row */
   gap: 2rem;
-  padding: 2rem 0;
+  padding: 1.5rem;
   max-width: 1200px;
   margin: 0 auto;
 }
@@ -1060,7 +1063,7 @@ img {
 
 /*==================== MEDIA QUERIES ====================*/
 /* For small devices */
-@media screen and (max-width: 350px) {
+@media screen and (min-width: 350px) {
   .container {
     margin-left: var(--mb-1);
     margin-right: var(--mb-1);
