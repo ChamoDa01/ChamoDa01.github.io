@@ -1,23 +1,60 @@
 /*==================== MENU SHOW Y HIDDEN ====================*/
-const navMenu = document.getElementById('nav-menu'),
-    navToggle = document.getElementById('nav-toggle'),
-    navClose = document.getElementById('nav-close')
-if(navToggle){
-    navToggle.addEventListener('click', () => {
-        navMenu.classList.add('show-menu')
-    })
+// Wait for DOM to be ready
+if (document.readyState === 'loading') {
+    document.addEventListener('DOMContentLoaded', initializeNavigation);
+} else {
+    initializeNavigation();
 }
-if(navClose){
-    navClose.addEventListener('click', () => {
-        navMenu.classList.remove('show-menu')
-    })
+
+function initializeNavigation() {
+    const navMenu = document.getElementById('nav-menu');
+    const navToggle = document.getElementById('nav-toggle');
+    const navClose = document.getElementById('nav-close');
+    const navLinks = document.querySelectorAll('.nav__link');
+    
+    console.log('Navigation initialized:', {
+        navMenu: !!navMenu,
+        navToggle: !!navToggle,
+        navClose: !!navClose,
+        hasShowMenu: navMenu ? navMenu.classList.contains('show-menu') : false
+    });
+    
+    // Ensure menu is hidden by default
+    if(navMenu) {
+        navMenu.classList.remove('show-menu');
+        console.log('Menu classes after init:', navMenu.className);
+    }
+    
+    // Show menu
+    if(navToggle && navMenu){
+        navToggle.addEventListener('click', function(e) {
+            e.preventDefault();
+            console.log('Toggle clicked - adding show-menu class');
+            navMenu.classList.add('show-menu');
+            console.log('Menu classes after toggle:', navMenu.className);
+        });
+    }
+    
+    // Hide menu
+    if(navClose && navMenu){
+        navClose.addEventListener('click', function(e) {
+            e.preventDefault();
+            console.log('Close clicked - removing show-menu class');
+            navMenu.classList.remove('show-menu');
+            console.log('Menu classes after close:', navMenu.className);
+        });
+    }
+    
+    // Hide menu when clicking nav links
+    navLinks.forEach(function(link) {
+        link.addEventListener('click', function() {
+            if(navMenu) {
+                console.log('Nav link clicked - hiding menu');
+                navMenu.classList.remove('show-menu');
+            }
+        });
+    });
 }
-const navLink = document.querySelectorAll('.nav__link')
-function linkAction(){
-    const navMenu = document.getElementById('nav-menu')
-    navMenu.classList.remove('show-menu')
-}
-navLink.forEach(n => n.addEventListener('click', linkAction))
 
 /*==================== SKILLS ====================*/
 const skillsContent = document.getElementsByClassName('skills__content'),
@@ -191,32 +228,41 @@ themeButton.addEventListener('click', () => {
 /*==================== SCROLL REVEAL ANIMATION ====================*/
 
 /*==================== EMAILJS ====================*/
-document.addEventListener('DOMContentLoaded', () => {
+// Initialize EmailJS when navigation is ready
+function initializeEmailJS() {
     emailjs.init('1N2vDZjN2lLcFeK9G');
-});
+    
+    const contactForm = document.getElementById('contact-form');
+    if (contactForm) {
+        contactForm.addEventListener('submit', function (e) {
+            e.preventDefault();
 
-const contactForm = document.getElementById('contact-form');
+            const name = document.getElementById('name').value;
+            const email = document.getElementById('email').value;
+            const project = document.getElementById('project').value;
+            const message = document.getElementById('message').value;
 
-contactForm.addEventListener('submit', function (e) {
-    e.preventDefault();
+            emailjs.send('service_wns7mgp', 'template_qu2k9lq', {
+                from_name: name,
+                from_email: email,
+                project: project,
+                message: message,
+            })
+            .then(response => {
+                alert('Message sent successfully!');
+                contactForm.reset();
+            })
+            .catch(error => {
+                console.error('Error:', error);
+                alert('Failed to send the message. Please try again later.');
+            });
+        });
+    }
+}
 
-    const name = document.getElementById('name').value;
-    const email = document.getElementById('email').value;
-    const project = document.getElementById('project').value;
-    const message = document.getElementById('message').value;
-
-    emailjs.send('service_wns7mgp', 'template_qu2k9lq', {
-        from_name: name,
-        from_email: email,
-        project: project,
-        message: message,
-    })
-    .then(response => {
-        alert('Message sent successfully!');
-        contactForm.reset();
-    })
-    .catch(error => {
-        console.error('Error:', error);
-        alert('Failed to send the message. Please try again later.');
-    });
-});
+// Initialize EmailJS after DOM is ready
+if (document.readyState === 'loading') {
+    document.addEventListener('DOMContentLoaded', initializeEmailJS);
+} else {
+    initializeEmailJS();
+}
