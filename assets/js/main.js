@@ -25,12 +25,11 @@ const skillsContent = document.getElementsByClassName('skills__content'),
 function toggleSkills(){
     let itemClass = this.parentNode.className
 
-    for(i = 0; i < skillsContent.length; i++){
-        skillsContent[i].className = 'skills__content skills__close'
-    }
-
+    // Toggle only the clicked skill, don't close others
     if(itemClass === 'skills__content skills__close'){
         this.parentNode.className = 'skills__content skills__open'
+    } else {
+        this.parentNode.className = 'skills__content skills__close'
     }
 }
 skillsHeader.forEach((el) => {
@@ -54,6 +53,26 @@ tabs.forEach(tab => {
         })
         tab.classList.add('qualification__active')
     })
+})
+
+/*==================== CERTIFICATIONS ====================*/
+const certificationContent = document.getElementsByClassName('certification__content'),
+    certificationHeader = document.querySelectorAll('.certification__header')
+
+function toggleCertification(){
+    let itemClass = this.parentNode.className
+
+    for(i = 0; i < certificationContent.length; i++){
+        certificationContent[i].className = 'certification__content certification__close'
+    }
+
+    if(itemClass === 'certification__content certification__close'){
+        this.parentNode.className = 'certification__content certification__open'
+    }
+}
+
+certificationHeader.forEach((el) => {
+    el.addEventListener('click', toggleCertification)
 })
 
 /*==================== SERVICES MODAL ====================*/

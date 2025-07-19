@@ -22,7 +22,7 @@
 
     <script>
         if (!localStorage.getItem('selected-theme')) {
-            localStorage.setItem('selected-theme', 'dark');
+            localStorage.setItem('selected-theme', 'light');
         }
         if (localStorage.getItem('selected-theme') === 'dark') {
             document.documentElement.classList.add('dark-theme');
@@ -32,17 +32,17 @@
     <title>Chamoda Pramudika | Portfolio</title>
     <link rel="icon" type="png" href="assets/img/title_icon.png">
 </head>
-    
+
 <!-- Google tag (gtag.js) -->
 <script async src="https://www.googletagmanager.com/gtag/js?id=G-J0CF54QV2L"></script>
 <script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
+    window.dataLayer = window.dataLayer || [];
+    function gtag() { dataLayer.push(arguments); }
+    gtag('js', new Date());
 
-  gtag('config', 'G-J0CF54QV2L');
+    gtag('config', 'G-J0CF54QV2L');
 </script>
-    
+
 <body>
     <!--==================== HEADER ====================-->
     <header class="header" id="header">
@@ -140,13 +140,13 @@
                         </a>
                     </div>
                 </div>
-                <div class="home__scroll">
+                <!-- <div class="home__scroll">
                     <a href="#about" class="home__scroll-button button--flex">
                         <i class="uil uil-mouse-alt home__scroll-mouse"></i>
                         <span class="home__scroll-name">Scroll down</span>
                         <i class="uil uil-arrow-down home__scroll-arrow"></i>
                     </a>
-                </div>
+                </div> -->
             </div>
         </section>
 
@@ -167,7 +167,7 @@
                             <span class="about__info-name">Years <br> experience</span>
                         </div>
                         <div>
-                            <span class="about__info-title">3</span>
+                            <span class="about__info-title">5</span>
                             <span class="about__info-name">Completed <br> project</span>
                         </div>
                         <div>
@@ -188,66 +188,95 @@
         <section class="skills section" id="skills">
             <h2 class="section__title">Skills</h2>
             <span class="section__subtitle">My technical level</span>
-            <div class="skills__container container grid">
-                <div>
-                    <!--==================== SKILLS 1 ====================-->
-                    <div class="skills__content skills__open">
-                        <div class="skills__header">
-                            <i class="uil uil-brackets-curly skills__icon"></i>
-                            <div>
-                                <h1 class="skills__title">Web Development</h1>
-                                <span class="skills__subtitle">JavaScript, Node.js, Python, Express.js, React.js, HTML,
-                                    CSS, MySQL, MongoDB</span>
-                            </div>
-                            <i class="uil uil-angle-down skills__arrow"></i>
+            <div class="skills__container container">
+                <!--==================== SKILLS 1 ====================-->
+                <div class="skills__content skills__close">
+                    <div class="skills__header">
+                        <i class="uil uil-brackets-curly skills__icon"></i>
+                        <div>
+                            <h1 class="skills__title">Web Development</h1>
+                            <span class="skills__subtitle">JavaScript, Node.js, Next.js, React.js, Express.js, FastAPI,
+                                HTML,
+                                CSS, MySQL, MongoDB</span>
                         </div>
-                        <div class="skills__list grid">
-                            <p class="skills__description">
-                                I am passionate about building innovative and scalable web applications that deliver
-                                seamless user experiences. With a strong foundation in technologies like Python,
-                                React.js, Node.js and Express.js, I create dynamic and efficient solutions that power
-                                businesses. From crafting intuitive interfaces to developing robust back-end systems, my
-                                goal is to provide high-quality, maintainable applications that drive user engagement
-                                and operational efficiency
-                            </p>
-                            <div class="skills__icons">
-                                <i class="devicon-javascript-plain colored"></i>
-                                <i class="devicon-nodejs-plain colored"></i>
-                                <i class="devicon-python-plain colored"></i>
-                                <i class="devicon-express-original"></i>
-                                <i class="devicon-react-original colored"></i>
-                                <i class="devicon-html5-plain colored"></i>
-                                <i class="devicon-css3-plain colored"></i>
-                                <i class="devicon-mysql-plain colored"></i>
-                                <i class="devicon-mongodb-plain colored"></i>
-                            </div>
+                        <i class="uil uil-angle-down skills__arrow"></i>
+                    </div>
+                    <div class="skills__list">
+                        <p class="skills__description">
+                            I am passionate about building innovative and scalable web applications that deliver
+                            seamless user experiences. With expertise in modern technologies like React, Next.js,
+                            FastAPI, Express.js, and JavaScript, I create dynamic and efficient solutions that power
+                            businesses. I also leverage Redux for state management to build maintainable applications.
+                            From crafting intuitive interfaces to developing robust back-end systems, my
+                            goal is to provide high-quality, scalable applications that drive user engagement
+                            and operational efficiency.
+                        </p>
+                        <div class="skills__icons">
+                            <i class="devicon-javascript-plain colored"></i>
+                            <i class="devicon-nodejs-plain colored"></i>
+                            <i class="devicon-fastapi-plain colored"></i>
+                            <i class="devicon-express-original"></i>
+                            <i class="devicon-react-original colored"></i>
+                            <i class="devicon-html5-plain colored"></i>
+                            <i class="devicon-css3-plain colored"></i>
+                            <i class="devicon-mysql-plain colored"></i>
+                            <i class="devicon-mongodb-plain colored"></i>
                         </div>
                     </div>
-                    <!--==================== SKILLS 2 ====================-->
-                    <div class="skills__content skills__close">
-                        <div class="skills__header">
-                            <i class="uil uil-swatchbook skills__icon"></i>
-                            <div>
-                                <h1 class="skills__title">App Development</h1>
-                                <span class="skills__subtitle">Python, Java, and Flutter with Dart</span>
-                            </div>
-                            <i class="uil uil-angle-down skills__arrow"></i>
+                </div>
+                <!--==================== SKILLS 2 ====================-->
+                <div class="skills__content skills__close">
+                    <div class="skills__header">
+                        <i class="uil uil-mobile-android skills__icon"></i>
+                        <div>
+                            <h1 class="skills__title">Mobile App Development</h1>
+                            <span class="skills__subtitle">Flutter, Dart, and Firebase</span>
                         </div>
-                        <div class="skills__list grid">
-                            <p class="skills__description">
-                                I am focused on developing high-quality applications using Python, Java, and Flutter
-                                with Dart for mobile app development. From concept to deployment, I ensure each app
-                                meets
-                                your needs, providing efficient, scalable, and user-friendly solutions. Whether it's
-                                a mobile app, web application, or desktop software, I work to create innovative,
-                                reliable,
-                                and seamless experiences that contribute to success in the digital world.
-                            </p>
-                            <div class="skills__icons">
-                                <i class="devicon-python-plain colored" title="Python"></i>
-                                <i class="devicon-java-plain colored" title="Java"></i>
-                                <i class="devicon-dart-plain colored" title="Dart"></i>
-                            </div>
+                        <i class="uil uil-angle-down skills__arrow"></i>
+                    </div>
+                    <div class="skills__list">
+                        <p class="skills__description">
+                            I have foundational knowledge in building cross-platform mobile applications using Flutter
+                            and Dart,
+                            with Firebase as the backend solution. As a beginner, I'm learning to create efficient
+                            mobile apps
+                            that work across both iOS and Android platforms. I'm developing my skills in mobile app
+                            development
+                            and exploring modern design patterns and functionality implementation.
+                        </p>
+                        <div class="skills__icons">
+                            <i class="devicon-flutter-plain colored" title="Flutter"></i>
+                            <i class="devicon-dart-plain colored" title="Dart"></i>
+                            <i class="devicon-firebase-plain colored" title="Firebase"></i>
+                        </div>
+                    </div>
+                </div>
+                <!--==================== SKILLS 3 ====================-->
+                <div class="skills__content skills__close">
+                    <div class="skills__header">
+                        <i class="uil uil-brain skills__icon"></i>
+                        <div>
+                            <h1 class="skills__title">AI/ML & Deep Learning</h1>
+                            <span class="skills__subtitle">TensorFlow, Scikit-learn</span>
+                        </div>
+                        <i class="uil uil-angle-down skills__arrow"></i>
+                    </div>
+                    <div class="skills__list">
+                        <p class="skills__description">
+                            I am a beginner in AI, machine learning, and deep learning with foundational knowledge in
+                            both supervised
+                            and unsupervised learning techniques. I have hands-on experience building a music genre
+                            classifier using
+                            Convolutional Neural Networks (CNN) with TensorFlow. As I continue to develop my skills, I'm
+                            exploring
+                            various machine learning algorithms and deep learning architectures to solve real-world
+                            problems and
+                            expand my understanding of AI technologies.
+                        </p>
+                        <div class="skills__icons">
+                            <i class="devicon-tensorflow-original colored" title="TensorFlow"></i>
+                            <i class="devicon-python-plain colored" title="Python"></i>
+                            <i class="devicon-numpy-plain colored" title="NumPy"></i>
                         </div>
                     </div>
                 </div>
@@ -265,6 +294,9 @@
                     </div>
                     <div class="qualification__button button--flex" data-target="#work">
                         <i class="uil uil-briefcase-alt qualification__icon"></i> Work
+                    </div>
+                    <div class="qualification__button button--flex" data-target="#certifications">
+                        <i class="uil uil-award qualification__icon"></i> Certifications
                     </div>
                 </div>
                 <div class="qualification__sections">
@@ -305,6 +337,170 @@
                     <!--==================== QUALIFICATION CONTENT 2 ====================-->
                     <div class="qualification__content" data-content id="work">
                         <!--==================== QUALIFICATION 1 ====================-->
+                        <div class="qualification__data">
+                            <div>
+                                <h3 class="qualification__title">No Work Experience Yet</h3>
+                                <span class="qualification__subtitle">Seeking Opportunities</span>
+                                <div class="qualification__calendar">
+                                    <i class="uil uil-calendar-alt"></i>
+                                    Available
+                                </div>
+                            </div>
+                            <div>
+                                <span class="qualification__rounder"></span>
+                            </div>
+                        </div>
+                    </div>
+                    <!--==================== QUALIFICATION CONTENT 3 ====================-->
+                    <div class="qualification__content" data-content id="certifications">
+                        <div class="certifications__container">
+                            <!--==================== CERTIFICATION 1 ====================-->
+                            <div class="certification__content certification__close">
+                                <div class="certification__header">
+                                    <img src="assets/img/Amazon_Web_Services.png" alt="AWS Badge" class="certification__icon">
+                                    <div>
+                                        <h1 class="certification__title">AWS Educate</h1>
+                                        <span class="certification__subtitle">Amazon Web Services • Apr 2025</span>
+                                    </div>
+                                    <i class="uil uil-angle-down certification__arrow"></i>
+                                </div>
+                                <div class="certification__details">
+                                    <div class="certification__info">
+                                        <div class="certification__data">
+                                            <p class="certification__description">
+                                                Completed multiple AWS Educate courses covering essential cloud computing concepts, web development, storage solutions, serverless architecture, and generative AI.
+                                            </p>
+                                            <div class="certification__badges-list">
+                                                <ul>
+                                                    <li>AWS Educate Web Builder</li>
+                                                    <li>AWS Educate Introduction to Cloud 101</li>
+                                                    <li>AWS Educate Getting Started with Storage</li>
+                                                    <li>AWS Educate Getting Started with Serverless</li>
+                                                    <li>AWS Educate Introduction to Generative AI</li>
+                                                </ul>
+                                            </div>
+                                            <div class="certification__skills">
+                                                <span class="certification__skill">AWS Cloud</span>
+                                                <span class="certification__skill">Web Development</span>
+                                                <span class="certification__skill">Cloud Storage</span>
+                                                <span class="certification__skill">Serverless Computing</span>
+                                                <span class="certification__skill">Generative AI</span>
+                                            </div>
+                                        </div>
+                                        <div class="certification__badge">
+                                            <img src="assets/img/aws-badges/aws-educate-web-builder.png" alt="AWS Web Builder" class="certification__badge-img">
+                                            <img src="assets/img/aws-badges/aws-educate-introduction-to-cloud-101.png" alt="AWS Introduction to Cloud 101" class="certification__badge-img">
+                                            <img src="assets/img/aws-badges/aws-educate-getting-started-with-storage.png" alt="AWS Getting Started with Storage" class="certification__badge-img">
+                                            <img src="assets/img/aws-badges/aws-educate-getting-started-with-serverless.png" alt="AWS Getting Started with Serverless" class="certification__badge-img">
+                                            <img src="assets/img/aws-badges/aws-educate-introduction-to-generative-ai.png" alt="AWS Introduction to Generative AI" class="certification__badge-img">
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <!--==================== CERTIFICATION 2 ====================-->
+                            <div class="certification__content certification__close">
+                                <div class="certification__header">
+                                    <img src="assets/img/kaggle-logo.png" alt="Kaggle Logo"
+                                        class="certification__icon">
+                                    <div>
+                                        <h1 class="certification__title">Kaggle Learn</h1>
+                                        <span class="certification__subtitle">Kaggle • Jul 2025</span>
+                                    </div>
+                                    <i class="uil uil-angle-down certification__arrow"></i>
+                                </div>
+                                <div class="certification__details">
+                                    <div class="certification__info">
+                                        <div class="certification__data">
+                                            <p class="certification__description">
+                                                Completed multiple Kaggle Learn courses focusing on machine learning and deep learning fundamentals.
+                                            </p>
+                                            <div class="certification__badges-list">
+                                                <ul>
+                                                    <li>Intro to Machine Learning</li>
+                                                    <li>Intermediate Machine Learning</li>
+                                                    <li>Intro to Deep Learning</li>
+                                                    <li>Computer Vision</li>
+                                                </ul>
+                                            </div>
+                                            <div class="certification__skills">
+                                                <span class="certification__skill">Machine Learning</span>
+                                                <span class="certification__skill">Deep Learning</span>
+                                                <span class="certification__skill">Computer Vision</span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <!--==================== CERTIFICATION 3 ====================-->
+                            <div class="certification__content certification__close">
+                                <div class="certification__header">
+                                    <img src="assets/img/github.png" alt="Github"
+                                        class="certification__icon">
+                                    <div>
+                                        <h1 class="certification__title">Github Education</h1>
+                                        <span class="certification__subtitle">Github • Apr 2025</span>
+                                    </div>
+                                    <i class="uil uil-angle-down certification__arrow"></i>
+                                </div>
+                                <div class="certification__details">
+                                    <div class="certification__info">
+                                        <div class="certification__data">
+                                            <p class="certification__description">
+                                                Completed the Github Foundations course, gaining essential skills in version control and collaboration using Git and Github.
+                                            </p>
+                                            <div class="certification__badges-list">
+                                                <ul>
+                                                    <li>Github Foundations</li>
+                                                </ul>
+                                            </div>
+                                            <div class="certification__skills">
+                                                <span class="certification__skill">Version Control</span>
+                                                <span class="certification__skill">Collaboration</span>
+                                            </div>
+                                        </div>
+                                        <div class="certification__badge">
+                                            <img src="assets/img/github-badges/github-foundations.png" alt="Python Certificate"
+                                                class="certification__badge-img">
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <!--==================== CERTIFICATION 4 ====================-->
+                            <div class="certification__content certification__close">
+                                <div class="certification__header">
+                                    <img src="assets/img/kodekloud-icon.png" alt="KodeKloud"
+                                        class="certification__icon">
+                                    <div>
+                                        <h1 class="certification__title">KodeKloud</h1>
+                                        <span class="certification__subtitle">KodeKloud • Apr 2025</span>
+                                    </div>
+                                    <i class="uil uil-angle-down certification__arrow"></i>
+                                </div>
+                                <div class="certification__details">
+                                    <div class="certification__info">
+                                        <div class="certification__data">
+                                            <p class="certification__description">
+                                                Completed comprehensive courses in cloud computing and containerization technologies, gaining hands-on experience with AWS services and Docker fundamentals.
+                                            </p>
+                                            <div class="certification__badges-list">
+                                                <ul>
+                                                    <li>Amazon Elastic Container Service (AWS ECS)</li>
+                                                    <li>Docker Training Course for the Absolute Beginner</li>
+                                                </ul>
+                                            </div>
+                                            <div class="certification__skills">
+                                                <span class="certification__skill">AWS ECS</span>
+                                                <span class="certification__skill">Docker</span>
+                                                <span class="certification__skill">Containerization</span>
+                                                <span class="certification__skill">Cloud Computing</span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
                     </div>
                 </div>
             </div>
@@ -458,8 +654,10 @@
                     <img src="assets/img/MyCampusHome.png" alt="Online Store" class="portfolio__img">
                     <div class="portfolio__content">
                         <h3 class="portfolio__title">MyCampusHome</h3>
-                        <p class="portfolio__description">Designed and developed MyCampusHome, an innovative web-based platform 
-                            that simplifies student accommodation searches near Sri Lankan universities. This first of its kind platform 
+                        <p class="portfolio__description">Designed and developed MyCampusHome, an innovative web-based
+                            platform
+                            that simplifies student accommodation searches near Sri Lankan universities. This first of
+                            its kind platform
                             enhances usability, efficiency, and accessibility for students and property owners.</p>
                         <a href="https://github.com/ChamoDa01/MyCampusHome.git"
                             class="button portfolio__button">Source</a>
