@@ -1001,12 +1001,8 @@ img {
 }
 
 .certification__info {
-  padding: 0 1.25rem 1.25rem;
+  padding: 0 1.25rem;
   display: block;
-}
-
-.certification__data {
-  margin-bottom: 1.5rem;
 }
 
 .certification__badge {
@@ -1022,10 +1018,6 @@ img {
   height: 4rem;
   object-fit: cover;
   border-radius: 0.5rem;
-}
-
-.certification__data {
-  margin-bottom: 1.5rem;
 }
 
 .certification__description {
